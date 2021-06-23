@@ -55,6 +55,8 @@ var questionAnswers = document.querySelector("question_answers");
 var count = 50;
 var everyScore = [];
 var storedScores = JSON.parse(localStorage.getItem("userData"));
+var alert =document.getElementById("alert");
+var info = document.getElementById("info");
 
 
 //Variables for the highscore page
