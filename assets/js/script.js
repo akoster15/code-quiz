@@ -47,6 +47,7 @@ var quizQuestions = document.getElementById("quiz-questions");
 var timer = document.getElementById("timer");
 var btnStart = document.getElementById("start-button");
 var timecounter = document.getElementById("timecounter");
+var titleitem = document.getElementById("title-item");
 var myScore = 0;
 var currentQuestion;
 var nextQuestion;
@@ -75,7 +76,6 @@ function starQuiz(){
     timecounter.classList.remove("d-none")
     quizQuestions.classList.remove("d-none")
     nextQuestions= questions[currentindex]
-    console.log(nextQuestions.title)
     
         displayQuestion(nextQuestions)
 
@@ -90,7 +90,7 @@ function startTimer(){
         }, 1000);
 }
 
-
+//Keeps track of the scores
 function scorePage(a, b) {
 
     var userData = {
@@ -103,6 +103,7 @@ function scorePage(a, b) {
     location.href = "score.html";
 }
 
+//displays the question
 function displayQuestion(question){
     titleitem.innerText=question.title
     questions.choices.forEach(element => {
@@ -114,6 +115,7 @@ function displayQuestion(question){
     });
 }
 
+//displays the next question
 function displayQuestion(e){
     currentindex++
     if(currentIndex < questions.length){
@@ -122,6 +124,7 @@ function displayQuestion(e){
     }
 }
 
+//determines if the answer is correct or incorrect
 function answerStatus(response){
     if(response){
         alert.innerText= "Correct!";
@@ -133,6 +136,7 @@ function answerStatus(response){
     set
 }
 
+//ends the quiz when either the timer hits 0 or all the questions have been answered
 function endQuiz(){
     myScore.innaText = count
     addscore.classList.remove("d-none")
@@ -141,6 +145,7 @@ function endQuiz(){
     addscore.classList.remove("d-none")
 }
 
+//displays the high scores for the quiz
 function displayScores() {
     if (storedScores !== null) {
         var scoreList = document.createElement("ol");
@@ -156,6 +161,7 @@ function displayScores() {
     }
 };
 
+//gives the users the option to go back or clear the scores on the list
 displayScores();
 
 backBtn.addEventListener("click", function () {
