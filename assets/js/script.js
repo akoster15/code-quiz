@@ -48,6 +48,7 @@ var timer = document.getElementById("timer");
 var startButton = document.getElementById("start-button");
 var timeCounter = document.getElementById("timecounter");
 var titleitem = document.getElementById("title-item");
+var buttonScore = document.getElementById("buttonScore");
 var myScore = 0;
 var currentQuestion;
 var nextQuestion;
@@ -83,6 +84,10 @@ function starQuiz(){
 
     startTimer()
 }
+buttonScore.addEventListener("click" , function(){
+    let name = document.getElementById("inputScore").value
+    scorePage(name, count)
+});
 
 //Function for quiz timer
 function startTimer(){
