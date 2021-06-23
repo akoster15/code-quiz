@@ -76,7 +76,7 @@ function starQuiz(){
     info.classList.add("d-none")
     startButton.classList.add("d-none")
     timeCounter.classList.remove("d-none")
-    quizQuestion.classList.remove("d-none")
+    quizQuestions.classList.remove("d-none")
     nextQuestion= questions[currentindex]
     
         displayQuestion(nextQuestions)
