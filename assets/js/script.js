@@ -46,7 +46,7 @@ var questions = [
 var quizQuestions = document.getElementById("quiz-questions");
 var timer = document.getElementById("timer");
 var startButton = document.getElementById("start-button");
-var timecounter = document.getElementById("timecounter");
+var timeCounter = document.getElementById("timecounter");
 var titleitem = document.getElementById("title-item");
 var myScore = 0;
 var currentQuestion;
@@ -75,9 +75,9 @@ function starQuiz(){
     }
     info.classList.add("d-none")
     startButton.classList.add("d-none")
-    timecounter.classList.remove("d-none")
-    quizQuestions.classList.remove("d-none")
-    nextQuestions= questions[currentindex]
+    timeCounter.classList.remove("d-none")
+    quizQuestion.classList.remove("d-none")
+    nextQuestion= questions[currentindex]
     
         displayQuestion(nextQuestions)
 
