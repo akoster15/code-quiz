@@ -10,26 +10,39 @@
 </head>
 
 <body>
-  <header>
-    <div class="large_font">Coding Quiz</div>
-    <button class="start_button">Start Quiz</button>
-  </header>
-
-  <div class="quiz_container">
-    
-    <header>
-      <div class="view_highscores">
-        <button class="view_highscores_button">View Higschores</button>
+  <div class="container d-flex justify-content-cent mt-5">
+    <div class="quiz_container col-lg-8 p-4">
+        <div class="col-lg-4">
+          <h1 class="large_font">Coding Quiz</h1>
+        </div>
+        <hr>
+        <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <h4><a href="./highscores.html">
+          <button class="float-left text-primary d-none" id="view_highscores_button">View Highscores</button>
+          </a></h4>
+        <h4 class="float-right text-primary d-none" id="timecounter">Time :<span id="timer">50</span></h4>
       </div>
-      <div class="timer">
-        <div class="time_left_text">Time: </div>
-        <div class="time_left_num"></div>
+      <div class="quiz-questions d-none" id="quiz-questions">
+        <h2 class="text-info  text-center" id="title-item">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+        <div class="answers mt-5 mb-5" id="question-answers">
+        </div>
+        <h1 id="alert"></h1>
       </div>
-    </header>
-
-
-
+      <div class="start_button d-flex flex-column justify-content-center mt-8 mb-10">
+        <button class="btn btn-primary btn-lg" id="start-button">Start</button>
+      </div>    
+      <div class=" input-group mb-3 d-none" id="addscore">
+        <h5 class="d-block"><span id="score"></span></h5>
+            <input type="text" class="form-control" placeholder="Enter your initials:"
+            id="inputScore" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="input-group-text btn btn-primary" id="btnScore">Submit</button>
+            </div>
+      </div>     
+    </div>
   </div>
+
   <script src="./assets/js/script.js"></script>
 </body>
-  
+</html>

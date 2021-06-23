@@ -1,0 +1,26 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: silver;
+    height: 100%;
+}
+
+.quiz_container{
+    background: #eee;
+    border: #000 solid 5px;
+}
+
+#start_button{
+    border: none;
+        padding: 5px 0 5px 0;
+        border-radius: 8px;
+        background: rgb(0, 255, 34)
+    font:bold 35px;
+        color: #eee;
+}
+
+
+#large_font{
+    text-align: center;
+    font-weight: bold;
+}
